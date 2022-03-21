@@ -52,9 +52,9 @@
                 margin-top: 20px;
               "
             >
-              <span class="currentSpeaker">Gulyás Arnold</span>
+              <span>Gulyás Arnold</span>
               <span>Marton Zoltán</span>
-              <span>Szabó Dániel</span>
+              <span class="currentSpeaker">Szabó Dániel</span>
             </div>
           </div>
           <img
@@ -70,7 +70,22 @@
             style="position: absolute; left: 0px; top: 10%"
           />
         </section>
-        <section>Slide 2</section>
+
+        <section data-background-color="#39a0ed">
+          <h1 style="font-family: Poppins; color: #f5f0f6">FRONTEND</h1>
+        </section>
+
+        <section>
+          <pre  class="tsx"><code data-trim data-noescape data-line-numbers class="language-typescript">
+            // Selected texture
+            const [texture, setTexture] = useState<Texture>(textures[0]);
+            useEffect(() => {
+              handleTextureChange(textures[0]);
+            }, [textures]);
+            const handleTextureChange = (texture: Texture) => {
+              setTexture(texture);
+            };</code></pre>
+        </section>
       </div>
     </div>
 
