@@ -32,6 +32,7 @@
   <div class="reveal">
     <div class="slides">
 
+      <!-- Title -->
       <section data-auto-animate>
         <div style="
               display: flex;
@@ -58,6 +59,7 @@
           style="position: absolute; left: 0px; top: 10%" />
       </section>
 
+      <!-- What is ARCHYTEX? -->
       <section data-auto-animate>
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
           <h3 style="margin-block-end: 0;">What is</h3>
@@ -67,7 +69,7 @@
                 align-items: center;
                 margin-top: 0;
               ">
-            <img src="res/img/logoLight.svg" alt="Archytex_logo" width="10%" style="margin: 0; margin-right: 20px;" />
+            <img src="res/img/logoLight.svg" alt="Archytex_logo" width="100px" style="margin: 0; margin-right: 20px;" />
             <h2 style="font-weight: bold; margin-bottom: 0;">ARCHYTEX</h2>
             <h2 style="display: inline-block;">?</h2>
           </div>
@@ -83,28 +85,68 @@
                 align-items: center;
                 margin-top: 0;
               ">
-            <img src="res/img/logoLight.svg" alt="Archytex_logo" width="10%" style="margin: 0; margin-right: 20px;" />
+            <img src="res/img/logoLight.svg" alt="Archytex_logo" width="100px" style="margin: 0; margin-right: 20px;" />
             <h2 style="font-weight: bold; margin-bottom: 0;">ARCHYTEX</h2>
             <h2 style="display: inline-block;">?</h2>
           </div>
 
-          <ul style="margin-top: 100px;">
-            <li class="fragment">Architectural visualization software</li>
-            <li class="fragment">3D editor</li>
+          <p style="margin-top: 100px;">
+            Architectural visualization software
+            <span style="font-weight: bold;">with</span>
+          </p>
+
+          <ul>
+            <li class=" fragment">Built-in 3D editor</li>
             <li class="fragment">Ray tracing renderer</li>
             <li class="fragment">Project manager</li>
           </ul>
         </div>
       </section>
 
+      <!-- Teamwork -->
+
+      <!-- 3D Editor -->
       <section data-background-color="#B3B752">
-        <h1 style="color: white;">Editor</h1>
+        <h1 style="color: white;">3D Editor</h1>
         <div style="display: flex; justify-content: space-between; width: 50%; margin: auto;">
           <img src="res/img/rust.svg" width="100px" />
-          <img src="res/img/wasm.svg" width="100px" />
           <img src="res/img/webgl.svg" width="200px" />
+          <img src="res/img/wasm.svg" width="100px" />
         </div>
       </section>
+
+      <!-- 
+
+        * Title
+
+        * Teamwork
+          - Built by 3 students
+          - Used GitHub for collab
+
+          * Shared workload
+            -  Szabó Dániel: Frontend
+            - Gulyás Arnold: 3D Editor
+            - Marton Zoltán: Backend, renderer
+
+        * Inspiration
+          - Blender
+          - Hammer
+        
+        * Technologies
+          * WASM
+            - Provides the performance required for this app
+
+          * Rust
+            - Modern and safe systems programming language, suited for this project
+            - Good WASM support
+          
+          * WebGL
+            - The only mature graphics API for the web
+            - Mention WGPU
+
+
+       -->
+
     </div>
   </div>
 
