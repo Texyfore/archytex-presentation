@@ -13,12 +13,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 :root {
   --r-background-color: #f5f0f6;
-  --r-main-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-main-font: Poppins, Source Sans Pro, Helvetica, sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #1b1b1a;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-heading-font: Poppins Source Sans Pro, Helvetica, sans-serif;
   --r-heading-color: #1b1b1a;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
