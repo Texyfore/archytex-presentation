@@ -28,6 +28,9 @@
         color: #39a0ed;
         font-weight: bold;
       }
+      .inline{
+        display: inline-block;
+      }
     </style>
   </head>
   <body style="font-family: Poppins">
@@ -137,6 +140,12 @@
           <img src="images/diagram1.svg" style="width: 45%;">
           <img src="images/diagram2.svg" style="width: 45%;">
         </section>
+        <section><h1 class="r-fit-text">Raytracer</h1></section>
+        <section>
+          <h1>Flowchart</h1>
+          <img src="images/diagram1.svg" style="width: 45%;">
+          <img src="images/diagram2.svg" style="width: 45%;" class="r-frame">
+        </section>
         <section>
           <section data-auto-animate data-auto-animate-restart>
             <img src="images/rabbitmq.svg">
@@ -152,14 +161,71 @@
         </section>
         <section>
           <section data-auto-animate data-auto-animate-restart>
-            <h1 style="display: inline-block;">Redis</h1>
+            <h1 class="inline">Redis</h1>
           </section>
           <section data-auto-animate>
-            <h1 style="display: inline-block;">Redis</h1>
-            <h1 style="display: inline-block;">AI</h1>
+            <h1 class="inline">Redis</h1>
+            <h1 class="inline">AI</h1>
           </section>
         </section>
-        <section><h1 class="r-fit-text">Raytracer</h1></section>
+        <section data-auto-animate data-auto-animate-restart>
+          <h1>Raytracing</h1>
+        </section>
+        <section data-auto-animate data-transition="fade">
+          <h1>Raytracing</h1>
+          <img src="images/raytracer/camera.png" alt="">
+        </section>
+        <section data-transition="fade">
+          <h1>Raytracing</h1>
+          <img src="images/raytracer/camera_sphere.png" alt="">
+        </section>
+        <section data-transition="fade" data-auto-animate>
+          <h1>Raytracing</h1>
+          <img src="images/raytracer/camera_sphere_color.png" alt="">
+        </section>
+        <section data-auto-animate>
+          <h1>Raytracing</h1>
+          <ul>
+            <li>Flexible</li>
+            <li class="fragment">Scalable</li>
+          </ul>
+        </section>
+        <section><h1>BVH</h1></section>
+        <section data-auto-animate><h1>Pathtracer</h1></section>
+        <section data-auto-animate>
+          <h1>Pathtracer</h1>
+          <ul>
+            <li>Light scatters</li>
+            <li class="fragment">Light moves symmetrically</li>
+          </ul>
+        </section>
+        <section><h1>Global Illumination</h1></section>
+        <section data-auto-animate><h2>Monte Carlo integration</h2></section>
+        <section data-auto-animate>
+          <h2>Monte Carlo integration</h2>
+          <h2>= Noise</h2>
+        </section>
+        <section data-auto-animate data-auto-animate-restart>
+          <h2 class="inline">O</h2><h2 class="inline">pen&nbsp;</h2><h2 class="inline">I</h2><h2 class="inline">mage&nbsp;</h2><h2 class="inline">D</h2><h2 class="inline">e<h2 class="inline">n</h2><h2 class="inline">oise</h2>
+        </section>
+        <section data-auto-animate>
+          <h2 class="inline">O</h2><h2 class="inline">I</h2><h2 class="inline">D</h2><h2 class="inline">n</h2>
+        </section>
+        <section data-auto-animate>
+          <h2 class="inline">O</h2><h2 class="inline">I</h2><h2 class="inline">D</h2><h2 class="inline">n</h2>
+          <br>
+          <div>
+            <img src="images/raytracer/raw.png" alt="">
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2 class="inline">O</h2><h2 class="inline">I</h2><h2 class="inline">D</h2><h2 class="inline">n</h2>
+          <br>
+          <div style="display: flex; ">
+            <img src="images/raytracer/raw.png" alt="">
+            <img src="images/raytracer/denoised.png" alt="" style="margin-left: 10px;">
+          </div>
+        </section>
       </div>
     </div>
 
