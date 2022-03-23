@@ -71,8 +71,8 @@
           />
         </section>
 
+        <!-- TODO: DELETE LATER -->
         <section>
-          <!-- TODO: DELETE LATER -->
           <h2 style="color: #f5f0f6">Presentation Outline</h2>
           <ul>
             <li>What is Archytex</li>
@@ -144,6 +144,13 @@
         </section>
         <section data-background-color="#1e1e1e" data-auto-animate>
           <h3>Design process</h3>
+          <div style="width: 100%; display: flex; flex-wrap: nowrap; justify-content: center; flex-direction: column;">
+            <img src="res/img/design/figma-screenshot-2.png" alt="Figma screenshot">
+            <span>Figma screenshot 2</span>
+          </div>
+        </section>
+        <section data-background-color="#1e1e1e" data-auto-animate>
+          <h3>Design process</h3>
           <div style="display: flex; justify-content: center; gap: 200px; margin-top: 50px; align-items: center;">
             <div style="display: flex; flex-wrap: nowrap; justify-content: left; align-items: flex-start; flex-direction: column;">
               <span>Illustrations with</span>
@@ -187,36 +194,118 @@
           </div>
         </section>
         
+        <!-- DEVELOPMENT STACK -->
+        <section>
+          <h1>Development Stack</h1>
+        </section>
         <!-- REACT -->
-        <section data-background-color="#39a0ed">
-          <h3 style="color: #f5f0f6;">React</h3>
+        <section data-background-color="#61DAFB">
+          <h2 style="color: #f5f0f6;">React</h2>
           <h6 style="color: #f5f0f6;">web application</h6>
           <img src="res/img/react_logo.svg" alt="react" width="20%">
         </section>
         <section data-auto-animate>
-          <h3>Why <span style="color: #39a0ed;">React</span>?</h3>
+          <h3>Why <span style="color: #61DAFB;">React</span>?</h3>
         </section>
         <section data-auto-animate>
-          <h3>Why <span style="color: #39a0ed;">React</span>?</h3>
+          <h3>Why <span style="color: #61DAFB;">React</span>?</h3>
           <img src="res/img/react/react-popularity.png" alt="react-popularity" width="50%" style="margin-bottom: -20px;">
           <div style="font-size: 12pt;"> Most popular web frameworks among developers worldwide 2021 </div>
           <div style="font-size: 12pt;">
             Published by
-            <span style="color: #39a0ed;">Lionel Sujay Vailshery</span> | Feb 23, 2022 
+            <span style="color: #61DAFB;">Lionel Sujay Vailshery</span> | Feb 23, 2022 
           </div>
         </section>
         <section data-auto-animate>
-          <h3>Why <span style="color: #39a0ed;">React</span>?</h3>
+          <h3>Why <span style="color: #61DAFB;">React</span>?</h3>
             <div>
               <ul>
+                <li class="fragment">JSX/TSX</li>
                 <li class="fragment">Hook based state management</li>
                 <li class="fragment">Functional components</li>
                 <li class="fragment">Large community, lots of resources</li>
                 <li class="fragment">Powerful, robust component libraries</li>
+                <li class="fragment">Hybrid rendering</li>
               </ul>
             </div>
         </section>
 
+        <!-- MUI -->
+        <section data-background-color="#007FFF">
+          <h2 style="color: #f5f0f6;">Material UI</h2>
+          <h6 style="color: #f5f0f6;">component library</h6>
+          <img src="res/img/mui.svg" alt="MUI" width="20%">
+        </section>
+
+        <!-- COMPONENT EXAMPLE -->
+        <section data-auto-animate>
+          <h3>Component example</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>Component example</h3>
+          <div data-id="react-component">ProjectList.tsx</div>
+        </section>
+        <section data-auto-animate>
+          <div data-id="react-component" style="font-size: 16pt;">ProjectList.tsx</div>
+          <div style="height: 650px;">
+            <pre  class="tsx" style="height: 100%;">
+              <code data-trim data-noescape data-line-numbers="1-8|9-18|19-21|22|23|24|25|26-47|27|28-38|29-34|37|39|40-44" class="language-typescript">
+                <script type="text/template">
+                import React from "react";
+                import { useTranslation } from "react-i18next";
+                import { styled } from "@mui/material/styles";
+                import Box from "@mui/material/Box";
+                import Typography from "@mui/material/Typography";
+                import CircularProgress from "@mui/material/CircularProgress";
+                import { Project, useProjects } from "../../services/projects";
+                import ProjectListItem from "./project-components/ProjectListItem";
+                const ProjectListContainer = styled(Box)(({ theme }) => ({
+                  height: "calc(100vh - 65px)",
+                  overflowY: "scroll",
+                  [`${theme.breakpoints.up("xs")} and (orientation: landscape)`]: {
+                    height: "calc(100vh - 49px - 60px)",
+                  },
+                  [theme.breakpoints.up("sm")]: {
+                    height: "calc(100vh - 65px - 60px)",
+                  },
+                }));
+                interface Props {
+                  query: string;
+                }
+                export default function ProjectList({ query }: Props) {
+                  const { t } = useTranslation();
+                  const { projects } = useProjects();
+                  return (
+                    <ProjectListContainer>
+                      {projects === undefined ? (
+                        <Box
+                          height='100%'
+                          display='flex'
+                          justifyContent='center'
+                          alignItems='center'
+                          flexDirection='column'
+                          gap={2}
+                        >
+                          <CircularProgress />
+                          <Typography>{t("loading_projects")}</Typography>
+                        </Box>
+                      ) : (
+                        projects.map(
+                          (project: Project) =>
+                            project.title.toLowerCase().includes(query.toLowerCase()) && (
+                              <ProjectListItem key={project.id} project={project} />
+                            )
+                        )
+                      )}
+                    </ProjectListContainer>
+                  );
+                }
+                };
+                </script>
+              </code>
+            </pre>
+          </div>
+        </section>
 
         <section>
           <pre  class="tsx"><code data-trim data-noescape data-line-numbers class="language-typescript">
