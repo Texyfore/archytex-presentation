@@ -40,3 +40,8 @@ $heading4Size: 1em;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.todo {
+    color: #bada55;
+    border: 2px solid red;
+}
