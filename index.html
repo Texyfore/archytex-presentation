@@ -229,6 +229,125 @@
           <li class="fragment">Accessible from Rust</li>
         </ul>
       </section>
+
+      <!-- How does it work? -->
+
+      <section>
+        <h2>How does it work?</h2>
+      </section>
+
+      <section>
+        <p style="font-size: 1.2em; margin-top: 0;">Editor layout</p>
+        <div
+          style="display: flex; flex-direction: column; justify-content: center; border-radius: 5px; overflow: hidden;">
+          <div style="background-color: #444; display: flex;">
+            <img src="res/img/logoDark.svg" style="margin: 0; height: 40px">
+          </div>
+          <div style="display: flex; flex-direction: row;">
+            <div
+              style="background-color: #181818; width: 640px; height: 500px; display: flex; justify-content: center; align-items: center; position: relative;">
+              <span style="color: white;">Canvas</span>
+              <div style="position: absolute; left: 0; top: 0; display: flex; flex-direction: row;">
+                <div style="background-color: #444; width: 40px; height: 40px; border-radius: 5px; margin: 5px;">
+                  &nbsp;
+                </div>
+                <div
+                  style="background-color: #444; width: 40px; height: 40px; border-radius: 5px; margin: 5px; margin-left: 0;">
+                  &nbsp;
+                </div>
+                <div
+                  style="background-color: #444; width: 40px; height: 40px; border-radius: 5px; margin: 5px; margin-left: 0;">
+                  &nbsp;
+                </div>
+                <div
+                  style="background-color: #444; width: 40px; height: 40px; border-radius: 5px; margin: 5px; margin-left: 0;">
+                  &nbsp;
+                </div>
+              </div>
+            </div>
+            <div
+              style="background-color: #3a3a3a; width: calc(100% - 640px); display: flex; flex-direction: column; justify-content: center;">
+              <span style="color: white;">Settings</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <p style="font-size: 1.2em; margin-bottom: 50px;">Communication with the browser</p>
+        <div style="margin-bottom: 100px;">
+          <pre style="margin-bottom: 0; border-radius: 10px; overflow: hidden;">
+            <code data-line-numbers data-trim>
+              const callback = new viewport.Callback(
+                (mode: number) => {
+                  // Detect editor mode change
+                },
+              );
+            </code>
+          </pre>
+          <span style="font-size: 0.8em;">Editor-to-browser communication</span>
+        </div>
+        <div>
+          <pre style="margin-bottom: 0; border-radius: 10px; overflow: hidden;">
+            <code data-line-numbers data-trim>
+              // Pushes the `LoadTexture` command into an
+              // asynchronous channel
+              sender.loadTexture(texture.id, bytes);
+            </code>
+          </pre>
+          <span style="font-size: 0.8em;">Browser-to-editor communication</span>
+        </div>
+      </section>
+
+      <section>
+        <p class="todo">Winit & input</p>
+      </section>
+
+      <section data-auto-animate>
+        <h2>Solids & props</h2>
+      </section>
+
+      <section data-auto-animate>
+        <h2>Solids & props</h2>
+        <p data-auto-animate-delay="0.5">A scene contains:</p>
+        <ul>
+          <li class="fragment">A camera</li>
+          <li class="fragment">Solids</li>
+          <li class="fragment">Props</li>
+        </ul>
+      </section>
+
+      <section data-auto-animate data-auto-animate-restart>
+        <p style="font-size: 1.5em;">What are <span style="font-weight: 550; font-style: italic;">solids</span>?</p>
+      </section>
+
+      <section data-auto-animate>
+        <p style="font-size: 1.5em;">What are <span style="font-weight: 550; font-style: italic;">solids</span>?</p>
+        <p>Cubes with <span style="font-weight: 550; font-style: italic;">modifiable</span> properties.</p>
+      </section>
+
+      <section>
+        <div style="display: flex; flex-direction: row;">
+          <img src="res/img/solid1.png" width="300px" style="margin: 5px;">
+          <img src="res/img/solid2.png" width="300px" style="margin: 5px;">
+          <img src="res/img/solid3.png" width="300px" style="margin: 5px;">
+        </div>
+        <p>The many forms of solids</p>
+      </section>
+
+      <section data-auto-animate data-auto-animate-restart>
+        <p style="font-size: 1.5em;">What are <span style="font-weight: 550; font-style: italic;">props</span>?</p>
+      </section>
+
+      <section data-auto-animate>
+        <p style="font-size: 1.5em;">What are <span style="font-weight: 550; font-style: italic;">props</span>?</p>
+        <p>Complex 3D models like <span style="font-weight: 550; font-style: italic;">furniture</span>.</p>
+      </section>
+
+      <section>
+        <p class="todo">Prop images</p>
+      </section>
+
     </div>
   </div>
 
