@@ -112,7 +112,7 @@
             </h2>
           </div>
           <div style="margin-top: 20px" class="fragment">
-            Archytectural visualisation
+            Architectural visualisation
           </div>
           <div class="fragment">3D modeling</div>
           <div class="fragment">Texturing</div>
@@ -952,46 +952,52 @@
         </section>
         <section>
           <h6 style="margin-bottom: 0">Using react-i18n</h6>
-          <div style="font-size: 24pt; margin-bottom: -15px">Import</div>
-          <pre class="tsx">
-            <code data-trim data-noescape data-line-numbers class="language-typescript">
-              <script type="text/template">
-                import { useTranslation } from "react-i18next";
-              </script>
-            </code>
-          </pre>
-          <div style="font-size: 24pt; margin-bottom: -15px">
-            Initialise in component function body
+          <div class="fragment">
+            <div style="font-size: 24pt; margin-bottom: -15px">Import</div>
+            <pre class="tsx">
+              <code data-trim data-noescape data-line-numbers class="language-typescript">
+                <script type="text/template">
+                  import { useTranslation } from "react-i18next";
+                </script>
+              </code>
+            </pre>
           </div>
-          <pre class="tsx">
-            <code data-trim data-noescape data-line-numbers class="language-typescript">
-              <script type="text/template">
-                export default function HomeContent() {
-                  const { t } = useTranslation();
-              </script>
-            </code>
-          </pre>
-          <div style="font-size: 24pt; margin-bottom: -15px">
-            Use t( ) to get translated string with key
+          <div class="fragment">
+            <div style="font-size: 24pt; margin-bottom: -15px">
+              Initialise in component function body
+            </div>
+            <pre class="tsx">
+              <code data-trim data-noescape data-line-numbers class="language-typescript">
+                <script type="text/template">
+                  export default function HomeContent() {
+                    const { t } = useTranslation();
+                </script>
+              </code>
+            </pre>
           </div>
-          <pre class="tsx">
-            <code data-trim data-noescape data-line-numbers class="language-typescript">
-              <script type="text/template">
-                <HomeSection
-                  title={t("section3_title")}
-                  subtitle={t("section3_subtitle")}
-                  paragraph={t("section3_paragraph")}
-                  ctaButton={
-                    <Button component={Link} to='/register' endIcon={<NavigateNext />}>
-                      {t("section3_cta")}
-                    </Button>
-                  }
-                  imageSrc={section3Image}
-                  imageAlt='Share'
-                />
-              </script>
-            </code>
-          </pre>
+          <div class="fragment">
+            <div style="font-size: 24pt; margin-bottom: -15px">
+              Use t( ) to get translated string with key
+            </div>
+            <pre class="tsx">
+              <code data-trim data-noescape data-line-numbers class="language-typescript">
+                <script type="text/template">
+                  <HomeSection
+                    title={t("section3_title")}
+                    subtitle={t("section3_subtitle")}
+                    paragraph={t("section3_paragraph")}
+                    ctaButton={
+                      <Button component={Link} to='/register' endIcon={<NavigateNext />}>
+                        {t("section3_cta")}
+                      </Button>
+                    }
+                    imageSrc={section3Image}
+                    imageAlt='Share'
+                  />
+                </script>
+              </code>
+            </pre>
+          </div>
         </section>
         <section data-auto-animate="oursource">
           <h3>Outsourcing translations</h3>
